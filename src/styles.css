@@ -1,1 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
+html, body, .wrapper{
+  height: 100%;
+  overflow-x: hidden;
+  color: rgba(41, 45, 61, 0.84);
+}
+.col-wrapper{
+  padding-left: 1em;
+}
