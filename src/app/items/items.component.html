@@ -1,0 +1,24 @@
+<div class="col-md-6 app-items-inner-wrapper">
+  <h3>Items</h3>
+  <div class="app-items-content">
+    <form class="form-inline">
+      <input class="form-control" type="text" #newitem placeholder="Type name hear...">
+      <button (click)="addItem({id : '', name : newitem.value, comments : []}, newitem)" class="btn btn-success">Add
+        new
+      </button>
+    </form>
+    <ul *ngIf="items && items.length > 0" class="list-unstyled">
+      <li *ngFor="let item of items" (click)="onSelect(item)" [ngClass]="{'item-selected': isItemSelected(item.id) }">
+        <span class="col-md-10 col-sm-10 col-xs-10"> {{item.name}}
+          <span class="label label-success">{{item.comments.length}}</span>
+        </span>
+        <button class="col-md-2 col-xs-2 btn btn-default" (click)="deleteItem(item.id)">Delete</button>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="col-md-6">
+  <app-comments [selectedItem]="selectedItem"></app-comments>
+</div>
+

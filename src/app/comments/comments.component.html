@@ -1,0 +1,23 @@
+<div class="app-comments-inner-wrapper">
+  <div *ngIf="!selectedItem"><h3>Select item to see comments.</h3></div>
+
+  <div *ngIf="selectedItem">
+    <h3>Comments #{{selectedItem.id}}</h3>
+    <div class="app-comments-content">
+      <div *ngIf="!selectedItem.comments.length" class="info-msg">
+        No comments yet. Add a new comment.
+      </div>
+      <div *ngIf="selectedItem.comments.length">
+        <ul class="list-unstyled">
+          <li *ngFor="let comment of selectedItem.comments let odd=odd; let even=even;">
+            <span class="comment-label" [ngClass]="{ label_odd: odd, label_even: even }"></span>
+            <span class="comment-text">{{comment}}</span>
+          </li>
+        </ul>
+      </div>
+      <span class="comment-label comment-label-empty"></span>
+      <textarea rows="5" #comment (blur)="addComment(selectedItem.id, comment.value, comment)"></textarea>
+    </div>
+  </div>
+</div>
+

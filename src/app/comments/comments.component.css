@@ -1,0 +1,50 @@
+.app-comments-inner-wrapper{
+  padding: 1em;
+  box-shadow: 0 1px 4px 0.5px rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+.app-comments-content{
+  padding: 0.5em;
+  margin-top: 2em;
+}
+
+.app-comments-inner-wrapper .comment-text{
+  width: 80%;
+  display: inline-block;
+}
+
+.label_even{
+  background-color: #474f7c;
+}
+
+.label_odd{
+  background-color: orange;
+}
+
+.app-comments-inner-wrapper .comment-label{
+  display: inline-block;
+  width: 48px;
+  height: 48px;
+  margin-right: 1em;
+  vertical-align: top;
+}
+
+.app-comments-inner-wrapper .comment-label-empty{
+  background-color: lightgrey;
+}
+.app-comments-inner-wrapper ul li {
+  border-bottom: 1px solid rgba(221, 221, 221, 0.53);
+  margin-bottom: 1em;
+  padding-bottom: 1em;
+}
+
+.app-comments-inner-wrapper .info-msg{
+  font-size: 16px;
+  margin-bottom: 1em;
+}
+.app-comments-inner-wrapper textarea{
+  width: 80%;
+}
+
